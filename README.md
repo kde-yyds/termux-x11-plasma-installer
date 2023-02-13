@@ -10,7 +10,7 @@ FPS稳定60帧
 2023/2/12 更新了LD_PRELOAD环境变量清空方法，修复了老版本安卓无法启动proot的问题  
 若之前已经安装了，可以用这个指令修复
 ```
-sed -i 's/env LD_PRELOAD=\'\'/env -u LD_PRELOAD/g' /data/data/com.termux/files/home/containers/scripts/*
+sed -i 's/env LD_PRELOAD=/env -u LD_PRELOAD/g' /data/data/com.termux/files/home/containers/scripts/*
 ```
 # 使用教程
 ## 安装termux和termux-x11
