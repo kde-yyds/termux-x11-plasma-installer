@@ -119,6 +119,6 @@ sleep 2
 /data/data/com.termux/files/home/containers/scripts/archlinuxarm_plasma.sh
 ">/data/data/com.termux/files/usr/bin/plasma
 chmod +x /data/data/com.termux/files/usr/bin/plasma
-
-sed -i 's/env LD_PRELOAD=\'\'/env -u LD_PRELOAD/g' /data/data/com.termux/files/home/containers/scripts/*
+sed -i 's/env LD_PRELOAD=/env -u LD_PRELOAD/g' /data/data/com.termux/files/home/containers/scripts/*
+#sed -i 's/env LD_PRELOAD=\'\'/env -u LD_PRELOAD/g' /data/data/com.termux/files/home/containers/scripts/*
 echo 安装完毕，输入plasma并回车即可启动termux-x11+KDE Plasma
