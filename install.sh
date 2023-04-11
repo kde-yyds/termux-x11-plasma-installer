@@ -4,6 +4,8 @@
 rm -rf /data/data/com.termux/files/usr/etc/apt/sources.list.d/
 echo "deb https://mirrors.bfsu.edu.cn/termux/apt/termux-main/ stable main
 deb https://mirrors.bfsu.edu.cn/termux/apt/termux-x11/ x11 main" > /data/data/com.termux/files/usr/etc/apt/sources.list
+apt update
+apt upgrade -y
 if [ -f /data/data/com.termux/files/usr/bin/aria2c ]
 then
 if [ -f /data/data/com.termux/files/usr/bin/p7zip ]
