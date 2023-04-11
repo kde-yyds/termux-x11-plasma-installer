@@ -12,8 +12,13 @@ if [ -f /data/data/com.termux/files/usr/bin/p7zip ]
 then
 if [ -f /data/data/com.termux/files/usr/var/lib/dpkg/info/coreutils.list ]
 then
+if [ -f /data/data/com.termux/files/usr/bin/tar ]
+then
 echo 依赖安装完毕
 else 
+apt install tar xz-utils -y 
+fi
+else
 apt install -y coreutils
 fi
 else
