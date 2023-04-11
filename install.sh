@@ -108,7 +108,7 @@ fi
 
 #解压plasma.tar.xz
 if [ -f plasma.tar.xz ]
-then echo tar -xvf plasma.tar.xz -C /data/data/com.termux/files/home/
+then tar -xvf plasma.tar.xz -C /data/data/com.termux/files/home/
 else
 echo plasma.tar.xz已解压
 fi
