@@ -23,15 +23,9 @@ termux-x11：<https://ghproxy.com/github.com/kde-yyds/termux-x11-plasma-installe
 进入termux  
 运行
 ```
-echo "deb https://mirrors.bfsu.edu.cn/termux/apt/termux-main/ stable main
-deb https://mirrors.bfsu.edu.cn/termux/apt/termux-x11/ x11 main">/data/data/com.termux/files/usr/etc/apt/sources.list
-rm -rf /data/data/com.termux/files/usr/etc/apt/sources.list.d/
 apt update
-apt upgrade -y
-apt install wget -y
-mkdir tmp
-cd tmp
-wget https://ghproxy.com/github.com/kde-yyds/termux-x11-plasma-installer/raw/master/install.sh
+apt install aria2 -y
+aria2c https://ghproxy.com/github.com/kde-yyds/termux-x11-plasma-installer/raw/master/install.sh
 chmod +x install.sh
 ./install.sh
 ```
