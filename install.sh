@@ -36,7 +36,7 @@ fi
 
 if sha1sum -c termux.tar.xz.sha1 >log.txt
 then echo 下载成功
-else echo 下载失败，即将退出;exit 1;
+else echo 下载失败，即将退出，请检查log.txt的输出信息;exit 1;
 fi
 
 if [ -f termux.tar.xz ]
@@ -56,7 +56,7 @@ fi
 
 if sha1sum -c plasma.tar.xz.7z.001.sha1 >log.txt
 then echo 下载成功
-else echo 下载失败，即将退出;exit 1;
+else echo 下载失败，即将退出，请检查log.txt的输出信息;exit 1;
 fi
 
 echo 38bc1a0aa1c29b066d0f9cb47d94b799c65ed313  plasma.tar.xz.7z.002 > plasma.tar.xz.7z.002.sha1 
@@ -67,7 +67,7 @@ fi
 
 if sha1sum -c plasma.tar.xz.7z.002.sha1
 then echo 下载成功
-else echo 下载失败，即将退出;exit 1;
+else echo 下载失败，即将退出，请检查log.txt的输出信息;exit 1;
 fi
 
 echo 303f41019d2a3f0d2fe0aeef7063ff7c301ed4e5  plasma.tar.xz.7z.003 > plasma.tar.xz.7z.003.sha1
@@ -78,7 +78,7 @@ fi
 
 if sha1sum -c plasma.tar.xz.7z.003.sha1
 then echo 下载成功
-else echo 下载失败，即将退出;exit 1;
+else echo 下载失败，即将退出，请检查log.txt的输出信息;exit 1;
 fi
 
 echo cc700b4cae43ddaeddfd5ed03974a97ebb2f68a7  plasma.tar.xz.7z.004 > plasma.tar.xz.7z.004.sha1
@@ -89,7 +89,7 @@ fi
 
 if sha1sum -c plasma.tar.xz.7z.004.sha1 >log.txt
 then echo 下载成功
-else echo 下载失败，即将退出;exit 1;
+else echo 下载失败，即将退出，请检查log.txt的输出信息;exit 1;
 fi
 
 echo c712ff34edf0ef97c12c72c57b14bf66ca22e51a  plasma.tar.xz.7z.005 > plasma.tar.xz.7z.005.sha1
@@ -100,12 +100,12 @@ fi
 
 if sha1sum -c plasma.tar.xz.7z.005.sha1 >log.txt
 then echo 下载成功
-else echo 下载失败，即将退出;exit 1;
+else echo 下载失败，即将退出，请检查log.txt的输出信息;exit 1;
 fi
 
 #解压获得plasma.tar.xz
 if [ -f plasma.tar.xz.7z.005 ]
-then 7z x plasma.tar.xz.7z.001 >log.txt
+then 7z x plasma.tar.xz.7z.001 >log.txt || plasma.tar.xz.7z已损坏，请重新执行该脚本 ; exit 1
 else
 echo plasma.tar.xz.7z已解压
 fi
@@ -113,7 +113,7 @@ fi
 
 #解压plasma.tar.xz
 if [ -f plasma.tar.xz ]
-then tar -xvf plasma.tar.xz -C /data/data/com.termux/files/home/ >log.txt
+then tar -xvf plasma.tar.xz -C /data/data/com.termux/files/home/ >log.txt || plasma.tar.xz已损坏，请重新执行该脚本 ; exit 1
 else
 echo plasma.tar.xz已解压
 fi
