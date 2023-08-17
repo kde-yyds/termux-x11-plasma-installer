@@ -105,7 +105,8 @@ fi
 
 #解压获得plasma.tar.xz
 if [ -f plasma.tar.xz.7z.005 ]
-then 7z x plasma.tar.xz.7z.001 >log.txt || plasma.tar.xz.7z已损坏，请重新执行该脚本 ; exit 1
+then
+test -f plasma.tar.xz || 7z x plasma.tar.xz.7z.001 >log.txt
 else
 echo plasma.tar.xz.7z已解压
 fi
@@ -113,7 +114,8 @@ fi
 
 #解压plasma.tar.xz
 if [ -f plasma.tar.xz ]
-then tar -xvf plasma.tar.xz -C /data/data/com.termux/files/home/ >log.txt || plasma.tar.xz已损坏，请重新执行该脚本 ; exit 1
+then 
+test -d containers || tar -xvf plasma.tar.xz -C /data/data/com.termux/files/home/ >log.txt
 else
 echo plasma.tar.xz已解压
 fi
