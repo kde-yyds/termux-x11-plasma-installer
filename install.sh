@@ -31,7 +31,7 @@ fi
 echo 5b34da13d9c7876183c6ec2446214edac2d6d470  termux.tar.xz > termux.tar.xz.sha1
 if sha1sum -c termux.tar.xz.sha1 >log.txt
 then echo termux.tar.xz已缓存
-else aria2c -x 16 -s 16 https://mirror.ghproxy.com/guthub.com/kde-yyds/termux-x11-plasma-image/releases/download/v1.0/termux.tar.xz >log.txt
+else aria2c -x 16 -s 16 https://mirror.ghproxy.com/github.com/kde-yyds/termux-x11-plasma-image/releases/download/v1.0/termux.tar.xz >log.txt
 fi
 
 if sha1sum -c termux.tar.xz.sha1 >log.txt
@@ -62,7 +62,7 @@ fi
 echo 38bc1a0aa1c29b066d0f9cb47d94b799c65ed313  plasma.tar.xz.7z.002 > plasma.tar.xz.7z.002.sha1 
 if sha1sum -c plasma.tar.xz.7z.002.sha1 >log.txt
 then echo plasma.tar.xz.7z.002已缓存
-else aria2c -x 16 -s 16 https://mirror.ghproxy.com/guthub.com/kde-yyds/termux-x11-plasma-image/releases/download/v1.0/plasma.tar.xz.7z.002 >log.txt
+else aria2c -x 16 -s 16 https://mirror.ghproxy.com/github.com/kde-yyds/termux-x11-plasma-image/releases/download/v1.0/plasma.tar.xz.7z.002 >log.txt
 fi
 
 if sha1sum -c plasma.tar.xz.7z.002.sha1
