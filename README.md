@@ -21,13 +21,13 @@ termux-x11：<https://ghproxy.com/github.com/kde-yyds/termux-x11-plasma-installe
 2.打开termux-x11,通知栏里按Preferences,把Show additional keyboard勾去掉
 ## 安装
 进入termux  
-运行
+没换源的先运行
 ```
-apt update
-apt install aria2 -y
-aria2c https://ghproxy.com/github.com/kde-yyds/termux-x11-plasma-installer/raw/master/install.sh
-chmod +x install.sh
-./install.sh
+termux-change-repo
+```
+然后运行
+```
+curl -L https://ghproxy.com/github.com/kde-yyds/termux-x11-plasma-installer/raw/master/install.sh | bash
 ```
 
 注：若安装过程被打断，重新运行即可，支持从中断的地方继续安装
